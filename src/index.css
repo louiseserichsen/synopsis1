@@ -1,0 +1,15 @@
+/* src/index.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Skjuler horisontal overflow */
+  background-color: #f4f4f4; /* Valgfri baggrundsfarve */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

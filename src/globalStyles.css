@@ -1,0 +1,32 @@
+/* globalStyles.css */
+
+/* Fælles stilarter for overskrifter */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Mørk grå farve */
+  line-height: 1.5; /* Bedre læsbarhed */
+  margin: 10px 0;
+}
+
+/* Specifik styling for h1 */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Specifik styling for h2 */
+h2 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #555; /* Lidt lysere grå for h2 */
+}
+
+/* Styling for paragrafer */
+p {
+  font-family: 'Arial', sans-serif;
+  color: #666; /* Lys grå farve */
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
