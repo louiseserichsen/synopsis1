@@ -15,3 +15,4 @@ export default function ToothModel({ setShowPopup, position = [0, 0, 0], scale =
     />
   );
 }
+

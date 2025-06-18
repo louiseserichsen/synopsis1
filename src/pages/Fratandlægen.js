@@ -23,62 +23,101 @@ const Fratandlægen = () => {
     },
   ];
 
-  return (
-    <div style={styles.container}>
-      <h1>Fra tandlægen</h1>
-      <p>Her kan du læse beskeder fra din tandlæge.</p>
+  const commonTextStyle = {
+    fontFamily: 'Arial, sans-serif',
+    color: '#000',
+  };
 
-      <div style={styles.messagesContainer}>
+  return (
+    <div
+      style={{
+        padding: '50px 20px',
+        textAlign: 'center',
+        ...commonTextStyle,
+      }}
+    >
+      <h1
+        style={{
+          fontSize: '2.5rem',
+          fontWeight: '700',
+          marginBottom: 15,
+          ...commonTextStyle,
+        }}
+      >
+        Fra tandlægen
+      </h1>
+      <p
+        style={{
+          fontSize: '1.2rem',
+          marginBottom: 30,
+          ...commonTextStyle,
+        }}
+      >
+        Her kan du læse beskeder fra din tandlæge.
+      </p>
+
+      <div
+        style={{
+          maxWidth: 600,
+          margin: '0 auto',
+          backgroundColor: '#f9f9f9',
+          borderRadius: 8,
+          boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+          padding: 20,
+          ...commonTextStyle,
+        }}
+      >
         {messages.map((message) => (
-          <div key={message.id} style={styles.message}>
-            <div style={styles.header}>
-              <span style={styles.dentist}>{message.dentist}</span>
-              <span style={styles.date}>{message.date}</span>
+          <div
+            key={message.id}
+            style={{
+              backgroundColor: '#fff',
+              marginBottom: 15,
+              padding: 15,
+              borderRadius: 8,
+              boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+              ...commonTextStyle,
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginBottom: 10,
+              }}
+            >
+              <span
+                style={{
+                  fontWeight: 'bold',
+                  color: '#000',
+                  ...commonTextStyle,
+                }}
+              >
+                {message.dentist}
+              </span>
+              <span
+                style={{
+                  color: '#555',
+                  fontFamily: 'Arial, sans-serif',
+                }}
+              >
+                {message.date}
+              </span>
             </div>
-            <p style={styles.messageContent}>{message.message}</p>
+            <p
+              style={{
+                fontSize: 16,
+                lineHeight: 1.5,
+                ...commonTextStyle,
+              }}
+            >
+              {message.message}
+            </p>
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    padding: '50px 20px',
-    textAlign: 'center',
-  },
-  messagesContainer: {
-    maxWidth: '600px',
-    margin: '0 auto',
-    backgroundColor: '#f9f9f9',
-    borderRadius: '8px',
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-    padding: '20px',
-  },
-  message: {
-    backgroundColor: '#ffffff',
-    marginBottom: '15px',
-    padding: '15px',
-    borderRadius: '8px',
-    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginBottom: '10px',
-  },
-  dentist: {
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  date: {
-    color: '#888',
-  },
-  messageContent: {
-    fontSize: '16px',
-    lineHeight: '1.5',
-  },
 };
 
 export default Fratandlægen;

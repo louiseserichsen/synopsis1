@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: Arial, sans-serif; /* Tilføjet Arial font her */
+  color: black; /* Gør teksten sort */
 }
 
 .App-logo {
@@ -14,18 +16,21 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff; /* Skiftet til hvid baggrund for kontrast til sort tekst */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black; /* Sort tekst */
+  font-family: Arial, sans-serif; /* Arial font her også */
 }
 
 .App-link {
-  color: #61dafb;
+  color: black; /* Sort linkfarve */
+  font-family: Arial, sans-serif;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
